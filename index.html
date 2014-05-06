@@ -9,10 +9,10 @@
     <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.css" />
 	
     <script src="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/polymer/0.1.4/platform.js"></script>
-
+    
     <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
-    <link rel="import" href="src/polymer-localforage.html">
+    
+    <script src="javascripts/localforage.js"></script>
 
     <title>Mapa</title>
   </head>
@@ -51,6 +51,7 @@
           var marker = L.marker([54.2578, 18.5094]).addTo(map).bindPopup("Tu mieszkam").openPopup();
           map.on('click', function(e) {return L.marker(e.latlng, {draggable: true}).addTo(map)});
         </script>
+        
       </div>
       <p></p>
     </div>

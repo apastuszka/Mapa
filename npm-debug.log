@@ -1,0 +1,39 @@
+info it worked if it ends with ok
+verbose cli [ '/usr/bin/nodejs', '/usr/bin/npm', 'search', 'serve' ]
+info using npm@1.1.4
+info using node@v0.6.19
+verbose config file /home/ania/.npmrc
+verbose config file /usr/etc/npmrc
+verbose config file /usr/share/npm/npmrc
+verbose mkdir (expected) error ENOENT, stat '/home/ania/.npm'
+verbose mkdir (expected) error ENOENT, stat '/home/ania/.npm/-'
+verbose mkdir (expected) error ENOENT, stat '/home/ania/.npm/-/all'
+verbose mkdir done: /home/ania/.npm/-/all 755
+WARN Building the local index for the first time, please be patient
+verbose raw, before any munging /-/all
+verbose url resolving [ 'https://registry.npmjs.org/', './-/all' ]
+verbose url resolved https://registry.npmjs.org/-/all
+http GET https://registry.npmjs.org/-/all
+ERR! Error: SSL Error: SELF_SIGNED_CERT_IN_CHAIN
+ERR!     at ClientRequest.<anonymous> (/usr/lib/nodejs/request/main.js:412:26)
+ERR!     at ClientRequest.g (events.js:156:14)
+ERR!     at ClientRequest.emit (events.js:67:17)
+ERR!     at HTTPParser.parserOnIncomingClient [as onIncoming] (http.js:1256:7)
+ERR!     at HTTPParser.parserOnHeadersComplete [as onHeadersComplete] (http.js:91:29)
+ERR!     at CleartextStream.socketOnData [as ondata] (http.js:1288:20)
+ERR!     at CleartextStream._push (tls.js:375:27)
+ERR!     at SecurePair.cycle (tls.js:734:20)
+ERR!     at EncryptedStream.write (tls.js:130:13)
+ERR!     at Socket.ondata (stream.js:38:26)
+ERR! You may report this log at:
+ERR!     <http://bugs.debian.org/npm>
+ERR! or use
+ERR!     reportbug --attach /home/ania/Informatyka/Mapa/npm-debug.log npm
+ERR! 
+ERR! System Linux 3.5.0-17-generic
+ERR! command "/usr/bin/nodejs" "/usr/bin/npm" "search" "serve"
+ERR! cwd /home/ania/Informatyka/Mapa
+ERR! node -v v0.6.19
+ERR! npm -v 1.1.4
+ERR! message SSL Error: SELF_SIGNED_CERT_IN_CHAIN
+verbose exit [ 1, true ]
