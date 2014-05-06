@@ -6,11 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="chrome=1" />
     <meta name="description" content="Mapa : Mapa-Leaflet" />
 	
-	  <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.css" />
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.css" />
 	
-	  <script src="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.js"></script>
+    <script src="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/polymer/0.1.4/platform.js"></script>
 
     <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+    <link rel="import" href="src/polymer-localforage.html">
 
     <title>Mapa</title>
   </head>
@@ -19,24 +21,25 @@
 
     <!-- HEADER -->
     <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/apastuszka/Mapa">View on GitHub</a>
+      <header class="inner">
+	<a id="forkme_banner" href="https://github.com/apastuszka/Mapa">View on GitHub</a>
 
-          <h1 id="project_title">Mapa</h1>
-          <h2 id="project_tagline">Mapa-Leaflet</h2>
+        <h1 id="project_title">Mapa</h1>
+        <h2 id="project_tagline">Mapa-Leaflet</h2>
 
-            <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/apastuszka/Mapa/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/apastuszka/Mapa/tarball/master">Download this project as a tar.gz file</a>
-            </section>
-        </header>
+        <section id="downloads">
+          <a class="zip_download_link" href="https://github.com/apastuszka/Mapa/zipball/master">Download this project as a .zip file</a>
+          <a class="tar_download_link" href="https://github.com/apastuszka/Mapa/tarball/master">Download this project as a tar.gz file</a>
+        </section>
+      </header>
     </div>
 
     <!-- MAIN CONTENT -->
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
         <h3>
-<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>Gdańsk i okolice</h3>
+	  <a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>Gdańsk i okolice
+	</h3>
       </section>
       <div id="map" class="inner">
         <script>
@@ -46,7 +49,7 @@
     maxZoom: 19
 }).addTo(map);
           var marker = L.marker([54.2578, 18.5094]).addTo(map).bindPopup("Tu mieszkam").openPopup();
-          map.on('click', function(e) {return L.marker(e.latlng).addTo(map)});
+          map.on('click', function(e) {return L.marker(e.latlng, {draggable: true}).addTo(map)});
         </script>
       </div>
       <p></p>
@@ -59,8 +62,6 @@
         <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
       </footer>
     </div>
-
-    
 
   </body>
 </html>
